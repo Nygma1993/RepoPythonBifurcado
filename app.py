@@ -16,7 +16,7 @@ def do_login():
 
     try:
         cursor = db.cursor()
-        sql = "SELECT name FROM users WHERE email=%s AND password=%s"
+        sql = "SELECT name FROM usuarios WHERE email=%s AND password=%s"
         cursor.execute(sql, (email, password))
         user = cursor.fetchone()
         cursor.close()
